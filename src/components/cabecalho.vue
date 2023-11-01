@@ -51,7 +51,7 @@ div.container
       )
         q-icon(
           size="md"
-          name="fa-brands fa-facebook"
+          name="fa-brands fa-square-facebook"
           color="white"
         )
 </template>
