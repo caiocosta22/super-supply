@@ -16,7 +16,11 @@ div.container
         icon="fa-brands fa-whatsapp"
         style="border-radius:20px"
       )
-        span.textobotao Fale com um de nossos consultores
+        a(
+          href="https://api.whatsapp.com/send?phone=5585997250181&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
+          style="text-decoration:none"
+        )
+          span.textobotao Fale com um de nossos consultores
 </template>
 
 <style scoped>
