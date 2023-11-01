@@ -1,12 +1,14 @@
 <script setup>
-import bannertopo from "src/components/banners/bannertopo.vue";
-import bannerregua from "src/components/banners/bannerregua.vue";
+import topo from "src/components/banners/topo.vue";
+import regua from "src/components/banners/regua.vue";
+import apresentacao from "src/components/banners/apresentacao.vue";
 </script>
 
 <template lang="pug">
 q-page-container
-  bannertopo
-  bannerregua
+  topo
+  regua
+  apresentacao
 </template>
 
 <style scoped>
