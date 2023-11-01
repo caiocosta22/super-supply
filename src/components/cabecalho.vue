@@ -42,7 +42,7 @@ div.container
       )
         q-icon(
           size="md"
-          name="fa-brands fa-instagram"
+          name="fa-brands fa-square-instagram"
           color="white"
         )
       a(
