@@ -9,6 +9,25 @@ div.container
         src="/images/logo.png"
         spinner-colow="white"
       )
+    div.row.q-gutter-sm
+      a(
+        target="_blank"
+        href="https://www.instagram.com/banbancalcados/"
+      )
+        q-icon(
+          size="md"
+          name="fa-brands fa-square-instagram"
+          color="white"
+        )
+      a(
+        target="_blank"
+        href="https://www.facebook.com/banbancalcadosperfil/"
+      )
+        q-icon(
+          size="md"
+          name="fa-brands fa-square-facebook"
+          color="white"
+        )
 </template>
 
 <style scoped>
@@ -38,5 +57,6 @@ div.container
 .logo {
   height: 40px;
   width: 186px;
+  cursor: pointer;
 }
 </style>
