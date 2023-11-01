@@ -4,10 +4,22 @@
 <template lang="pug">
 div.container
   div.interno
-    div(style="width:45%")
-      span(style="font-size:28px; font-weight:400;text-align:left;") Tudo o que você precisa em suprimentos corporativos está aqui.&nbsp
-      span(style="font-size:28px; font-weight:bold;text-align:left;") Papelaria, limpeza, descartáveis, EPI, equipamentos e muito mais.
-    div(style="width:55%")
+    div(
+      style="width:45%;"
+    )
+      span(
+        style="font-size:28px; font-weight:400;text-align:left;"
+      ) Tudo o que você precisa em suprimentos corporativos está aqui.&nbsp
+      span(
+        style="font-size:28px; font-weight:bold;text-align:left;"
+      ) Papelaria, limpeza, descartáveis, EPI, equipamentos e muito mais.
+    div(
+      style="width:55%"
+    )
+      img(
+        src="/images/caixas.png"
+        style="overflow:visible; z-index:2; position:absolute;"
+      )
 </template>
 
 <style scoped>
@@ -18,12 +30,14 @@ div.container
   display: flex;
 }
 .interno {
-  max-height: 317px;
-  flex-direction: column;
+  height: 317px;
+  flex-direction: row;
   display: flex;
   margin: 0 auto;
   position: relative;
   width: 85%;
+  align-items: center;
+  overflow: hidden;
 }
 span {
   color: #18264c;
