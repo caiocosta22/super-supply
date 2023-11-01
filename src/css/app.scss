@@ -1,0 +1,21 @@
+// app global css in SCSS form
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.container {
+  display:flex;
+  flex-wrap:nowrap;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+}
+.imagem {
+  width: 100%;
+  display: block;
+}
+
+* {
+  font-family: Montserrat;
+}
