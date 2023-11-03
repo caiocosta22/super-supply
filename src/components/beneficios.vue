@@ -8,6 +8,24 @@ const icons = ref([
   { icone: "/images/beneficios/5.png", tag: "Atendimentos Personalizados" },
   { icone: "/images/beneficios/6.png", tag: "Integração com seu ERP" }
 ]);
+const settings = ref({
+  snapAlign: "start",
+  wrapAround: true
+});
+const breakpoints = ref({
+  368: {
+    itemsToShow: 3.0
+  },
+  768: {
+    itemsToShow: 6.0
+  },
+  1024: {
+    itemsToShow: 6.0
+  },
+  1280: {
+    itemsToShow: 6.0
+  }
+});
 </script>
 
 <template lang="pug">
