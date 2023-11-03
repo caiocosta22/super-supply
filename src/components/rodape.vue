@@ -43,7 +43,7 @@ div.container
             outlined
             v-model="nome"
             bg-color="white"
-            placeholder="Ex: Super Supply"
+            placeholder="Ex: Seu Nome"
             dense
           )
       div(
@@ -54,7 +54,7 @@ div.container
             rounded
             outlined
             v-model="email"
-            placeholder="Ex: exemplo@supersupply.com"
+            placeholder="Ex: exemplo@exemplo.com"
             bg-color="white"
             dense
           )
