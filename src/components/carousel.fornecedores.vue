@@ -80,6 +80,7 @@ div.q-py-xl(style="background-color:#ececec")
   justify-content: center;
   position: relative;
   width: 100%;
+  padding-bottom: 40px;
   background-color: #ececec;
 }
 p {
