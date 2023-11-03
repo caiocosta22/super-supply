@@ -14,11 +14,10 @@ div.container
         style="font-size:28px; font-weight:bold;text-align:left;"
       ) Papelaria, limpeza, descartáveis, EPI, equipamentos e muito mais.
     div(
-      style="width:55%"
+      style="width:40%; margin-bottom: 100px; z-index: 1;"
     )
       img(
         src="/images/caixas.png"
-        style="overflow:visible; z-index:2; position:absolute;"
       )
 </template>
 
@@ -37,7 +36,6 @@ div.container
   position: relative;
   width: 85%;
   align-items: center;
-  overflow: hidden;
   justify-content: space-between;
 }
 span {
