@@ -1,54 +1,68 @@
 <script setup>
-import { ref } from "vue";
-
-const slide = ref(0);
-const autoplay = ref(true);
-
-const bannersCarousel = ref([
+import { ref, onMounted } from "vue";
+const show = ref(true);
+const banners = ref([
   {
-    fotoWebp: "/images/banner.png",
-    id: 0,
-    image: "",
-    ordem: 0,
-    posicionamento: "topo"
+    fundo: "/images/fadebanner/banner_top_descartaveis.jpg",
+    persona: "/images/fadebanner/descartaveis.png",
+    chamada: "/images/fadebanner/tudo_descartaveis.png"
   },
   {
-    fotoWebp: "/images/banner.png",
-    id: 1,
-    image: "",
-    ordem: 0,
-    posicionamento: "topo"
-  },
-  {
-    fotoWebp: "/images/banner.png",
-    id: 2,
-    image: "",
-    ordem: 0,
-    posicionamento: "topo"
+    fundo: "/images/fadebanner/banner_top_epi.jpg",
+    persona: "/images/fadebanner/epi.png",
+    chamada: "/images/fadebanner/tudo_epi.png"
   }
 ]);
+
+const currentIndex = ref(0);
+
+const currentBanner = ref(banners.value[currentIndex.value]);
+
+const startBannerRotation = () => {
+  setInterval(() => {
+    currentIndex.value = (currentIndex.value + 1) % banners.value.length;
+    currentBanner.value = banners.value[currentIndex.value];
+  }, 5000);
+};
+
+onMounted(() => {
+  startBannerRotation();
+});
 </script>
 
 <template lang="pug">
 div.banner
-  q-carousel.cursor-pointer.col(
-    v-model="slide"
-    animated
-    infinite
-    swipeable
-    :autoplay="autoplay"
-    transition-prev="slide-right"
-    transition-next="slide-left"
+  transition(
+    name="fade"
+    mode="out-in"
   )
-    template(
-      v-for="(banner, index) in bannersCarousel"
-      :key="index"
+    div.row(
+      v-show="show"
     )
-      q-carousel-slide.slide.col(
-        :name="index"
-        :img-src="banner.fotoWebp"
-        spinner="white"
+      div(
+        style="display: flex;"
       )
+        div(
+          style="display: flex;"
+        )
+          img(
+            :key="currentIndex"
+            :src="currentBanner.fundo"
+          )
+        div.persona
+          img(
+            :key="currentIndex"
+            :src="currentBanner.persona"
+          )
+        div.chamada
+          img(
+            :key="currentIndex"
+            :src="currentBanner.chamada"
+          )
+        div.titulo
+          img(
+            src="/images/fadebanner/logo.png"
+          )
 </template>
 
 <style scoped>
@@ -56,14 +70,37 @@ div.banner
   display:flex;
   flex-direction: column;
   box-sizing: border-box;
-  justify-content: center;
   aspect-ratio: auto 1920/668;
   position: relative;
   height: auto;
-  width:100%;
+  width: 100%;
+  overflow: hidden;
 }
-.slide{
-  max-width: 100%;
-  display:block;
+.persona {
+  position: absolute;
+  width: 59%;
+  display: flex;
+  justify-content: end;
+  z-index: 1;
+}
+.chamada {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  z-index: 2;
+  justify-content: end;
+  align-items: center;
+  margin-top: 170px
+}
+.titulo {
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  width: 73%;
+  margin-top: 230px;
+  justify-content: end;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
