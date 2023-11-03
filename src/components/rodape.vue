@@ -65,8 +65,10 @@ div.container
             placeholder="Ex: (85) 91234-5678"
             bg-color="white"
           )
-    div.column
-      div.row.q-gutter-sm
+    div.column.justify-start.align-center
+      div.row.q-gutter-sm(
+        style="margin-bottom:10px"
+      )
         a(
           target="_blank"
           href="https://br.linkedin.com/company/supersupply"
@@ -94,9 +96,12 @@ div.container
             name="fa-brands fa-square-facebook"
             color="white"
           )
-      p.titulo Solicite seu orçamento agora mesmo!
+      div
+        p.titulo(
+          style="margin: 0; margin-bottom: 10px ;"
+        ) Solicite seu orçamento agora mesmo!
       div(
-        style="margin-left:40px;height:40px; max-width:400px; align-items:center"
+        style="align-items:center"
       )
         q-btn(
           no-caps
