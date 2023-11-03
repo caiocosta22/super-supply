@@ -44,6 +44,7 @@ div.container
             v-model="nome"
             bg-color="white"
             placeholder="Ex: Super Supply"
+            dense
           )
       div(
         style="margin-bottom: 10px;"
@@ -55,6 +56,7 @@ div.container
             v-model="email"
             placeholder="Ex: exemplo@supersupply.com"
             bg-color="white"
+            dense
           )
       div(
         style="margin-bottom: 10px;"
@@ -67,6 +69,7 @@ div.container
             mask="(##)#####-####"
             placeholder="Ex: (85) 91234-5678"
             bg-color="white"
+            dense
           )
     div.column.justify-start.align-center
       div.row.q-gutter-sm(
