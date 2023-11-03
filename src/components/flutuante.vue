@@ -5,7 +5,7 @@
 div.container
   div.interno
     div(
-      style="width:40%;"
+      style="width:45%;"
     )
       span(
         style="font-size:28px; font-weight:400;text-align:left;"
@@ -14,7 +14,7 @@ div.container
         style="font-size:28px; font-weight:bold;text-align:left;"
       ) Papelaria, limpeza, descartáveis, EPI, equipamentos e muito mais.
     div(
-      style="width:40%; margin-bottom: 60px; margin-left: 300px; position: absolute;"
+      style="width:40%; margin-bottom: 60px;z-index:1;"
     )
       img(
         src="/images/caixas.png"
@@ -36,8 +36,6 @@ div.container
   position: relative;
   width: 85%;
   align-items: center;
-  overflow:visible;
-  z-index: 1;
   justify-content: space-between;
 }
 span {
