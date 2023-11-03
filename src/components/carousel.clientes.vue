@@ -4,16 +4,16 @@ import { Carousel, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 
 const icons = ref([
-  { icone: "/images/fornecedores/1.png", tag: "Escolar" },
-  { icone: "/images/fornecedores/2.png", tag: "Escritório" },
-  { icone: "/images/fornecedores/3.png", tag: "Papelaria" },
-  { icone: "/images/fornecedores/4.png", tag: "Limpeza" },
-  { icone: "/images/fornecedores/5.png", tag: "Descartáveis" },
-  { icone: "/images/fornecedores/6.png", tag: "EPI" },
-  { icone: "/images/fornecedores/7.png", tag: "Ferramentas" },
-  { icone: "/images/fornecedores/8.png", tag: "Informática" },
-  { icone: "/images/fornecedores/9.png", tag: "Eletroportáteis" },
-  { icone: "/images/fornecedores/10.png", tag: "Eletroportáteis" }
+  { icone: "/images/clientes/1.png", tag: "Escolar" },
+  { icone: "/images/clientes/2.png", tag: "Escritório" },
+  { icone: "/images/clientes/3.png", tag: "Papelaria" },
+  { icone: "/images/clientes/4.png", tag: "Limpeza" },
+  { icone: "/images/clientes/5.png", tag: "Descartáveis" },
+  { icone: "/images/clientes/6.png", tag: "EPI" },
+  { icone: "/images/clientes/7.png", tag: "Ferramentas" },
+  { icone: "/images/clientes/8.png", tag: "Informática" },
+  { icone: "/images/clientes/9.png", tag: "Eletroportáteis" },
+  { icone: "/images/clientes/10.png", tag: "Eletroportáteis" }
 ]);
 
 const settings = ref({
@@ -41,7 +41,7 @@ const breakpoints = ref({
 
 <template lang="pug">
 div.q-py-xl(style="background-color:#ececec")
-  p(style="font-weight:700; font-size: 34px; text-align:CENTER; margin: 0") PRINCIPAIS FORNECEDORES
+  p(style="font-weight:700; font-size: 34px; text-align:CENTER; margin: 0") PRINCIPAIS CLIENTES
 .container
   Carousel(
       v-bind="settings"

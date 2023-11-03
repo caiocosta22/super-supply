@@ -6,6 +6,7 @@ import beneficios from "src/components/beneficios.vue";
 import flutuante from "src/components/flutuante.vue";
 import suprimentos from "src/components/suprimentos.vue";
 import carousel from "src/components/carousel.fornecedores.vue";
+import clientes from "src/components/carousel.clientes.vue";
 </script>
 
 <template lang="pug">
@@ -17,6 +18,7 @@ q-page-container
   flutuante
   suprimentos
   carousel
+  clientes
 </template>
 
 <style scoped>
