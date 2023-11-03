@@ -40,8 +40,6 @@ const breakpoints = ref({
 </script>
 
 <template lang="pug">
-div.q-py-xl(style="background-color:#ececec")
-  p(style="font-weight:700; font-size: 34px; text-align:CENTER; margin: 0") PRINCIPAIS FORNECEDORES
 .container
   Carousel(
       v-bind="settings"

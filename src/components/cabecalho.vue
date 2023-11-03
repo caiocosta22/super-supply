@@ -4,9 +4,9 @@ const menus = ref([
   { titulo: "Quem somos", sessao: "apresentacao" },
   { titulo: "Benefícios e Soluções", sessao: "beneficios" },
   { titulo: "Suprimentos", sessao: "suprimentos" },
-  { titulo: "Fornecedores", sessao: "fornecedores" },
-  { titulo: "Clientes", sessao: "clientes" },
-  { titulo: "Contato", sessao: "contato" }
+  { titulo: "Fornecedores", sessao: "carousel1" },
+  { titulo: "Clientes", sessao: "carousel2" },
+  { titulo: "Contato", sessao: "rodape" }
 ]);
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);

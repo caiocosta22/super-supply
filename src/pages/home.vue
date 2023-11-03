@@ -18,10 +18,20 @@ q-page-container
   beneficios#beneficios
   flutuante
   suprimentos#suprimentos
-  carousel#fornecedores
+  div.q-py-xl#carousel1(style="background-color:#ececec")
+    p(style="font-weight:700; font-size: 34px; color: #18264c; text-align:CENTER;") PRINCIPAIS FORNECEDORES
+  carousel
   chamada
-  clientes#clientes
+  div.q-py-xl#carousel2(style="background-color:#ececec")
+    p(style="font-weight:700; font-size: 34px; color: #18264c; text-align:CENTER;") PRINCIPAIS CLIENTES
+  clientes
 </template>
 
 <style scoped>
+#carousel1 {
+  padding-top: 100px;
+}
+#carousel2 {
+  padding-top: 100px;
+}
 </style>

@@ -36,7 +36,9 @@ div.banner
     name="fade"
     mode="out-in"
   )
-    div.banner
+    div.banner(
+      v-show="show"
+    )
       div.banner(
         style="display: flex;"
       )
