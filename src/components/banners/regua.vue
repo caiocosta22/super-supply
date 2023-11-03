@@ -18,6 +18,7 @@ div.container
       )
         a(
           href="https://api.whatsapp.com/send?phone=5585997250181&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
+          target="_blank"
           style="text-decoration:none"
         )
           span.textobotao Fale com um de nossos consultores
