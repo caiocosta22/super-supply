@@ -36,33 +36,28 @@ div.banner
     name="fade"
     mode="out-in"
   )
-    div.row(
-      v-show="show"
-    )
-      div(
+    div.banner
+      div.banner(
         style="display: flex;"
       )
-        div(
-          style="display: flex;"
+        img(
+          :key="currentIndex"
+          :src="currentBanner.fundo"
         )
-          img(
-            :key="currentIndex"
-            :src="currentBanner.fundo"
-          )
-        div.persona
-          img(
-            :key="currentIndex"
-            :src="currentBanner.persona"
-          )
-        div.chamada
-          img(
-            :key="currentIndex"
-            :src="currentBanner.chamada"
-          )
-        div.titulo
-          img(
-            src="/images/fadebanner/logo.png"
-          )
+      div.persona
+        img(
+          :key="currentIndex"
+          :src="currentBanner.persona"
+        )
+      div.chamada
+        img(
+          :key="currentIndex"
+          :src="currentBanner.chamada"
+        )
+      div.titulo
+        img(
+          src="/images/fadebanner/logo.png"
+        )
 </template>
 
 <style scoped>
