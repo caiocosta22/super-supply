@@ -108,7 +108,7 @@ div.container
             href="https://api.whatsapp.com/send?  phone=5585997250181&text=Ol%C3%A1,  %20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
             style="text-decoration:none"
           )
-            span.textobotao Fale com um de nossos consultores
+            span Fale com um de nossos consultores
 </template>
 <style scoped>
 .container {
@@ -142,5 +142,9 @@ div.container
 p.titulo:hover {
   color: yellow;
   transition: 0.5s
+}
+a {
+  text-decoration: none;
+  color: #fff
 }
 </style>
