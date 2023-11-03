@@ -43,16 +43,17 @@ div.container
       )
         q-icon(
           size="md"
-          name="fa-brands fa-linkedin"
+          name="img:/icons/03.png"
           color="white"
         )
       a(
         target="_blank"
         href="https://www.instagram.com/supersupplyoficial/"
+        style="padding-top: 3px;"
       )
         q-icon(
-          size="md"
-          name="fa-brands fa-square-instagram"
+          size="sm"
+          name="img:/icons/02.png"
           color="white"
         )
       a(
@@ -61,7 +62,7 @@ div.container
       )
         q-icon(
           size="md"
-          name="fa-brands fa-square-facebook"
+          name="img:/icons/01.png"
           color="white"
         )
 </template>
