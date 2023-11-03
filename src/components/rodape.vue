@@ -27,7 +27,9 @@ div.container
       )
         p.titulo(
         ) {{ menu.titulo }}
-    div.column
+    div.column(
+      style="width: 25%;"
+    )
       div(
         style="margin-bottom: 20px;"
       )
@@ -121,7 +123,7 @@ div.container
   background-color: #18264c;
   display: flex;
   flex-direction: row;
-  height: 400px;
+  height: 500px;
   align-items: center;
 }
 .interno {
