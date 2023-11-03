@@ -41,6 +41,7 @@ div.container
             outlined
             v-model="nome"
             bg-color="white"
+            placeholder="Ex: Super Supply"
           )
       div(
         style="margin-bottom: 10px;"
