@@ -28,12 +28,12 @@ div.container
         src="/images/logo.png"
         spinner-colow="white"
       )
-    div.navegacao.row
+    div.row.col.justify-evenly
       template(
         v-for="menu in menus"
         :key="menu.titulo"
       )
-        p.titulo(
+        p.titulo.row(
           @click="scrollToSection(menu.sessao)"
         ) {{ menu.titulo }}
     div.row.q-gutter-sm
@@ -91,6 +91,11 @@ div.container
   background-color: #18264c;
   max-height: 80px;
 }
+.navegacao {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
 .logo {
   height: 40px;
   width: 186px;
@@ -100,8 +105,7 @@ div.container
   font-size: 14px;
   color:#fff;
   font-weight: bold;
-  margin: 0 auto;
-  margin-left: 60px;
+  margin: 0;
   cursor:pointer
 }
 p:hover {
