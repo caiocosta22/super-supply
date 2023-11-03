@@ -17,7 +17,7 @@ const icons = ref([
 div.container
   div.interno.q-pt-xl
     p.q-pb-md(style="font-weight:700; font-size: 34px; text-align:left") TUDO EM SUPRIMENTOS PARA O SEU NEGÓCIO
-    div.row.flex.justify-between(style="width:100%;")
+    div.row.flex.justify-between(style="width:100%; position: relative;")
       div(
         v-for="(icon,index) in icons"
         :key="index"

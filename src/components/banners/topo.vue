@@ -8,9 +8,19 @@ const banners = ref([
     chamada: "/images/fadebanner/tudo_descartaveis.png"
   },
   {
+    fundo: "/images/fadebanner/banner_top_escritorio.jpg",
+    persona: "/images/fadebanner/escritorio.png",
+    chamada: "/images/fadebanner/tudo_escritorio.png"
+  },
+  {
     fundo: "/images/fadebanner/banner_top_epi.jpg",
     persona: "/images/fadebanner/epi.png",
     chamada: "/images/fadebanner/tudo_epi.png"
+  },
+  {
+    fundo: "/images/fadebanner/banner_top_limpeza.jpg",
+    persona: "/images/fadebanner/limpeza.png",
+    chamada: "/images/fadebanner/tudo_limpeza.png"
   }
 ]);
 
