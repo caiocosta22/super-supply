@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { Carousel, Navigation, Slide } from "vue3-carousel";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 
 const icons = ref([
@@ -17,7 +17,8 @@ const icons = ref([
 ]);
 
 const settings = ref({
-  snapAlign: "center",
+  snapAlign: "start",
+  autoplay: 2500,
   wrapAround: true
 });
 
@@ -32,14 +33,14 @@ const breakpoints = ref({
     itemsToShow: 6.0
   },
   1280: {
-    itemsToShow: 6.0
+    itemsToShow: 8.0
   }
 });
 
 </script>
 
 <template lang="pug">
-div.q-py-md(style="background-color:#ececec")
+div.q-py-xl(style="background-color:#ececec")
   p(style="font-weight:700; font-size: 34px; text-align:CENTER; margin: 0") PRINCIPAIS FORNECEDORES
 .container
   Carousel(
@@ -69,26 +70,16 @@ div.q-py-md(style="background-color:#ececec")
 }
 
 .carousel__slide img {
-  height: 70%;
-  width: 70%;
-  margin: 0 auto;
-}
-.carousel__slide span {
-  height: 20%;
+  height: 90%;
+  width: 90%;
 }
 
-.carousel__slide .text-black.text-center {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .container{
   display:flex;
   flex-wrap:nowrap;
   justify-content: center;
   position: relative;
   width: 100%;
-  height: 200px;
   background-color: #ececec;
 }
 p {
