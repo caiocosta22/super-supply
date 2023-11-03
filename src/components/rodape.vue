@@ -121,28 +121,6 @@ div.container
             style="text-decoration:none"
           )
             span Fale com um de nossos consultores
-div.column.q-pt-lg(
-  style="background-color: #fff; display: flex; justify-content: center; margin: 0 auto; align-items: center; text-align: center;"
-)
-  p.justify-center(
-    style="font-size:20px; color:#18264c; margin: 0 auto; font-weight: bold;"
-  ) Copyright © 2023 Super Supply. Todos os direitos reservados.
-  p(
-    style="color:#18264c; font-size: 16px; font-weight: 500;"
-  ) SUPER SUPPLY DISTRIBUIDORA LTDA CNPJ: 45.141.688/0001-68
-  div.row(style="width: 500px; height: 100px; align-items: center; overflow: hidden; justify-content: center; margin: 0 auto;")
-    p(
-      style="font-size: 16px;color:#18264c;font-weight: 500;"
-    ) Desenvolvido por:
-    a(
-      href="https://www.instagram.com/agenciaalastrar/"
-      cursor-pointer
-      target="_blank"
-    )
-      img(
-        src="/images/alastar.png"
-        style="display: block; width: 100px;  height: 100px; padding-bottom: 15px;"
-      )
 </template>
 <style scoped>
 .container {
