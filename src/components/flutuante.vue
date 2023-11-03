@@ -38,6 +38,7 @@ div.container
   width: 85%;
   align-items: center;
   overflow: hidden;
+  justify-content: space-between;
 }
 span {
   color: #18264c;

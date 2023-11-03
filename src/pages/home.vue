@@ -4,6 +4,7 @@ import regua from "src/components/banners/regua.vue";
 import apresentacao from "src/components/banners/apresentacao.vue";
 import beneficios from "src/components/beneficios.vue";
 import flutuante from "src/components/flutuante.vue";
+import suprimentos from "src/components/suprimentos.vue";
 </script>
 
 <template lang="pug">
@@ -13,6 +14,7 @@ q-page-container
   apresentacao
   beneficios
   flutuante
+  suprimentos
 </template>
 
 <style scoped>
