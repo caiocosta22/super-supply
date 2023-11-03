@@ -65,6 +65,50 @@ div.container
             placeholder="Ex: (85) 91234-5678"
             bg-color="white"
           )
+    div.column
+      div.row.q-gutter-sm
+        a(
+          target="_blank"
+          href="https://br.linkedin.com/company/supersupply"
+        )
+          q-icon(
+            size="md"
+            name="fa-brands fa-linkedin"
+            color="white"
+          )
+        a(
+          target="_blank"
+          href="https://www.instagram.com/supersupplyoficial/"
+        )
+          q-icon(
+            size="md"
+            name="fa-brands fa-square-instagram"
+            color="white"
+          )
+        a(
+          target="_blank"
+          href="https://www.facebook.com/"
+        )
+          q-icon(
+            size="md"
+            name="fa-brands fa-square-facebook"
+            color="white"
+          )
+      p.titulo Solicite seu orçamento agora mesmo!
+      div(
+        style="margin-left:40px;height:40px; max-width:400px; align-items:center"
+      )
+        q-btn(
+          no-caps
+          color="green"
+          icon="fa-brands fa-whatsapp"
+          style="border-radius:20px"
+        )
+          a(
+            href="https://api.whatsapp.com/send?  phone=5585997250181&text=Ol%C3%A1,  %20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
+            style="text-decoration:none"
+          )
+            span.textobotao Fale com um de nossos consultores
 </template>
 <style scoped>
 .container {
