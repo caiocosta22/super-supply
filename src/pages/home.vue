@@ -7,6 +7,7 @@ import flutuante from "src/components/flutuante.vue";
 import suprimentos from "src/components/suprimentos.vue";
 import carousel from "src/components/carousel.fornecedores.vue";
 import clientes from "src/components/carousel.clientes.vue";
+import chamada from "src/components/banners/chamada.vue";
 </script>
 
 <template lang="pug">
@@ -18,6 +19,7 @@ q-page-container
   flutuante
   suprimentos
   carousel
+  chamada
   clientes
 </template>
 
