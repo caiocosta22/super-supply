@@ -8,4 +8,5 @@ q-layout(view="lHh Lpr lFf")
 
 <script setup>
 import cabecalho from "src/components/cabecalho.vue";
+import rodape from "src/components/rodape.vue";
 </script>
