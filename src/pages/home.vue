@@ -14,13 +14,13 @@ import chamada from "src/components/banners/chamada.vue";
 q-page-container
   topo
   regua
-  apresentacao
-  beneficios
+  apresentacao#apresentacao
+  beneficios#beneficios
   flutuante
-  suprimentos
-  carousel
+  suprimentos#suprimentos
+  carousel#fornecedores
   chamada
-  clientes
+  clientes#clientes
 </template>
 
 <style scoped>

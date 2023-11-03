@@ -3,7 +3,7 @@ q-layout(view="lHh Lpr lFf")
   q-header
     cabecalho
   router-view
-  rodape
+  rodape#contato
 </template>
 
 <script setup>

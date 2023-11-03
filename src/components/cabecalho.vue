@@ -1,14 +1,23 @@
 <script setup>
 import { ref } from "vue";
 const menus = ref([
-  { titulo: "Quem somos" },
-  { titulo: "Benefícios e Soluções" },
-  { titulo: "Suprimentos" },
-  { titulo: "Fornecedores" },
-  { titulo: "Clientes" },
-  { titulo: "Contato" }
+  { titulo: "Quem somos", sessao: "apresentacao" },
+  { titulo: "Benefícios e Soluções", sessao: "beneficios" },
+  { titulo: "Suprimentos", sessao: "suprimentos" },
+  { titulo: "Fornecedores", sessao: "fornecedores" },
+  { titulo: "Clientes", sessao: "clientes" },
+  { titulo: "Contato", sessao: "contato" }
 ]);
+const scrollToSection = (sectionId) => {
+  const section = document.getElementById(sectionId);
 
+  if (section) {
+    window.scrollTo({
+      top: section.offsetMid,
+      behavior: "smooth"
+    });
+  }
+};
 </script>
 
 <template lang="pug">
@@ -25,6 +34,7 @@ div.container
         :key="menu.titulo"
       )
         p.titulo(
+          @click="scrollToSection(menu.sessao)"
         ) {{ menu.titulo }}
     div.row.q-gutter-sm
       a(

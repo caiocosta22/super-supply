@@ -3,7 +3,7 @@
 
 <template lang="pug">
 div.container
-  div.justify-center
+  div.justify-center.q-pt-lg
     p(style="font-weight:700; font-size: 34px; text-align:center") QUEM SOMOS
   div.interno.q-pt-xl
     div(style="width:40%")
