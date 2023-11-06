@@ -167,8 +167,6 @@ p:hover {
     display: none;
   }
 }
-@media screen and (max-width: 480px) {
-}
 @media screen and (max-width: 360px) {
   .logo {
     height: 30px;
