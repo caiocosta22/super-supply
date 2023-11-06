@@ -28,7 +28,7 @@ div.container
         src="/images/logo.png"
         spinner-colow="white"
       )
-    div.row.col.justify-evenly
+    div#navegacao.row.col.justify-evenly
       template(
         v-for="menu in menus"
         :key="menu.titulo"
@@ -91,11 +91,6 @@ div.container
   background-color: #18264c;
   max-height: 80px;
 }
-.navegacao {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
 .logo {
   height: 40px;
   width: 186px;
@@ -112,4 +107,15 @@ p:hover {
   color: yellow;
   transition: 0.5s
 }
+@media (max-width: 1280px) {
+  .titulo {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1024px) {
+  #navegacao {
+    display: none;
+  }
+}
+
 </style>
