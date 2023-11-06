@@ -88,8 +88,8 @@ p {
   }
   .barras {
     width: 85%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .titulo {
     font-size: 30px
@@ -109,13 +109,13 @@ p {
 }
 @media screen and (max-width: 480px) {
   .titulo {
-    font-size: 28px
+    font-size: 26px
   }
   .texto1 {
-    font-size: 24px;
+    font-size: 22px;
   }
   .texto2 {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 </style>
