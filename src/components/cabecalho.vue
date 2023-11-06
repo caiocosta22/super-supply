@@ -37,7 +37,9 @@ div.container
         p.titulo.row(
           @click="scrollToSection(menu.sessao)"
         ) {{ menu.titulo }}
-    div.row.q-gutter-sm
+    div.row.q-gutter-sm(
+      style="flex-wrap: nowrap;"
+    )
       a(
         target="_blank"
         href="https://br.linkedin.com/company/supersupply"
@@ -163,6 +165,13 @@ p:hover {
   }
   .botaomenu {
     display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 360px) {
+  .logo {
+    height: 30px;
   }
 }
 
