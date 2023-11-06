@@ -137,7 +137,7 @@ div.drawermenu
   cursor:pointer
 }
 .titulodrawer {
-  font-size: 18px;
+  font-size: 14px;
   color:#fff;
   font-weight: bold;
   margin: 0;
