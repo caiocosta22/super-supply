@@ -8,6 +8,7 @@ const menus = ref([
   { titulo: "Clientes", sessao: "carousel2" },
   { titulo: "Contato", sessao: "rodape" }
 ]);
+const drawer = ref(false);
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
 
@@ -65,6 +66,38 @@ div.container
           name="img:/icons/01.png"
           color="white"
         )
+      div.botaomenu.row
+        q-btn(
+          flat
+          @click="drawer = !drawer"
+          round
+          dense
+          icon="menu"
+          color="white"
+        )
+div.drawermenu
+  q-drawer(
+    behavior="mobile"
+    v-model="drawer"
+    :width="200"
+    :breakpoint="1025"
+    bordered
+    side="right"
+    class="bg-primary"
+  )
+    q-scroll-area(class="fit")
+      q-list
+        template(
+          v-for="menu in menus"
+          :key="menu.titulo"
+        )
+          q-item(
+            clickable :active="menu.titulo === 'Outbox'" v-ripple
+            @click="scrollToSection(menu.sessao)"
+          )
+            q-item-section
+              p.titulodrawer {{ menu.titulo }}
+          q-separator
 </template>
 
 <style scoped>
@@ -103,6 +136,13 @@ div.container
   margin: 0;
   cursor:pointer
 }
+.titulodrawer {
+  font-size: 18px;
+  color:#fff;
+  font-weight: bold;
+  margin: 0;
+  cursor:pointer
+}
 p:hover {
   color: yellow;
   transition: 0.5s
@@ -114,6 +154,14 @@ p:hover {
 }
 @media (max-width: 1024px) {
   #navegacao {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .drawermenu {
+    display: none;
+  }
+  .botaomenu {
     display: none;
   }
 }
