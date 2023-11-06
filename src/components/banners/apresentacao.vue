@@ -4,7 +4,7 @@
 <template lang="pug">
 div.container
   div.justify-center.q-pt-lg
-    p(style="font-weight:700; font-size: 34px; text-align:center") QUEM SOMOS
+    p.titulo QUEM SOMOS
   div.interno.q-pt-xl
     div.coluna
       p.texto1 Descubra uma abordagem moderna e inovadora, criada  especialmente para empresas como a sua.
@@ -60,6 +60,11 @@ p {
   margin: 0 auto;
   color: #18264c;
 }
+.titulo {
+  font-weight:700;
+  font-size: 34px;
+  text-align:center
+}
 @media screen and (max-width: 1024px) {
   .texto1 {
     font-size: 28px;
@@ -86,11 +91,31 @@ p {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+  .titulo {
+    font-size: 30px
+  }
+  .texto1 {
+    font-size: 26px;
+  }
+  .texto2 {
+    font-size: 14px;
+  }
 }
 @media screen and (min-width: 768px) {
   #barra2 {
     display: none;
   }
 
+}
+@media screen and (max-width: 480px) {
+  .titulo {
+    font-size: 28px
+  }
+  .texto1 {
+    font-size: 24px;
+  }
+  .texto2 {
+    font-size: 14px;
+  }
 }
 </style>
