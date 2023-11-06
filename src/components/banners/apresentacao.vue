@@ -109,13 +109,21 @@ p {
 }
 @media screen and (max-width: 480px) {
   .titulo {
-    font-size: 26px
+    font-size: 24px
   }
   .texto1 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .texto2 {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 365px) {
+.container {
+    height: 600px;
+  }
+  .interno {
+    max-height: 530px;
   }
 }
 </style>
