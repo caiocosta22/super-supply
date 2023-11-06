@@ -73,10 +73,13 @@ p {
     display: none;
   }
   .interno {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .coluna {
     width: 85%;
+  }
+  .interno {
+    padding-top: 20px;
   }
   .barras {
     width: 85%;
