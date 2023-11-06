@@ -18,12 +18,16 @@ q-page-container
   beneficios#beneficios
   flutuante
   suprimentos#suprimentos
-  div.q-py-xl#carousel1(style="background-color:#ececec")
-    p(style="font-weight:700; font-size: 34px; color: #18264c; text-align:CENTER;") PRINCIPAIS FORNECEDORES
+  div.q-py-xl#carousel1(
+    style="background-color:#ececec"
+  )
+    p.titulo PRINCIPAIS FORNECEDORES
   carousel
   chamada
-  div.q-py-xl#carousel2(style="background-color:#ececec")
-    p(style="font-weight:700; font-size: 34px; color: #18264c; text-align:CENTER;") PRINCIPAIS CLIENTES
+  div.q-py-xl#carousel2(
+    style="background-color:#ececec"
+  )
+    p.titulo PRINCIPAIS CLIENTES
   clientes
 </template>
 
@@ -33,5 +37,28 @@ q-page-container
 }
 #carousel2 {
   padding-top: 100px;
+}
+.titulo {
+  font-weight:700;
+  font-size: 34px;
+  color: #18264c;
+  text-align:CENTER
+}
+
+@media screen and (max-width: 1024px) {
+  .drawermenu {
+    display: none;
+  }
+  .botaomenu {
+    display: none;
+  }
+  .titulo {
+    font-size: 28px
+  }
+}
+@media screen and (max-width: 768px) {
+  .titulo {
+    font-size: 24px
+  }
 }
 </style>
