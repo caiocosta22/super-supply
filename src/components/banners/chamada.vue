@@ -6,16 +6,11 @@ const slide = ref(0);
 <template lang="pug">
 div.banner
   div.container
-    div(
-      style="margin-bottom: 102px;"
-    )
+    div.containerimage
       img(
         src="images/HOMEM.png"
-        style="height: 740px;"
       )
-    div(
-      style="width: 30%; margin-left: 160px;"
-    )
+    div.texto
       div
         p SEJA QUAL FOR O SEU NEGÓCIO
       div
@@ -44,6 +39,12 @@ div.banner
   margin: 0 auto;
   align-items: center;
 }
+.containerimage {
+  margin-bottom: 102px;
+}
+img {
+  height: 740px;
+}
 p {
   color: #feee00;
   font-size: 60px;
@@ -57,4 +58,43 @@ span {
   color:#fff;
  font-size: 30px;
 }
+.texto {
+  width: 30%;
+  margin-left: 160px;
+}
+@media (max-width: 1024px) {
+  .texto {
+    width: 50%;
+    margin-left: 80px;
+  }
+  p {
+    font-size: 38px;
+  }
+  span {
+    font-size: 28px;
+  }
+}
+@media (max-width: 769px) {
+  .texto {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  img {
+    height: 640px;
+  }
+  .containerimage {
+    margin-bottom: 0
+  }
+}
+@media (max-width: 480px) {
+  p {
+    font-size: 24px;
+  }
+  span {
+    font-size: 20px;
+  }
+}
+
 </style>
