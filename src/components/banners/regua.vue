@@ -7,10 +7,8 @@ div.container
   div.interno
     div
       p.chamada Solicite seu orçamento agora mesmo!
-    div(
-      style="margin-left:40px;height:40px; max-width:400px;align-items:center"
-    )
-      q-btn(
+    div.containerbotao
+      q-btn.botao(
         no-caps
         color="green"
         icon="fa-brands fa-whatsapp"
@@ -50,5 +48,36 @@ div.container
   font-weight: bold;
   margin: 0 auto;
   margin-left:8px
+}
+.containerbotao {
+  margin-left:40px;
+  height:40px;
+  max-width:400px;
+  align-items:center;
+}
+
+@media screen and (max-width: 1024px) {
+  .chamada {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .chamada {
+    display: none;
+  }
+  .containerbotao {
+    margin-left: 0px;
+  }
+  .botao {
+    height: 20px;
+  }
+  .textobotao {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .textobotao {
+    font-size: 10px;
+  }
 }
 </style>
