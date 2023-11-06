@@ -13,12 +13,6 @@ div.container
       span(
         style="font-size:28px; font-weight:bold;text-align:left;"
       ) Papelaria, limpeza, descartáveis, EPI, equipamentos e muito mais.
-    div(
-      style="width:40%; margin-bottom: 60px;z-index:1;"
-    )
-      img(
-        src="/images/caixas.png"
-      )
 </template>
 
 <style scoped>
