@@ -27,9 +27,7 @@ div.container
       )
         p.titulo(
         ) {{ menu.titulo }}
-    div.column(
-      style="width: 25%;"
-    )
+    div.inputs
       div(
         style="margin-bottom: 20px;"
       )
@@ -120,7 +118,105 @@ div.container
             href="https://api.whatsapp.com/send?  phone=5585997250181&text=Ol%C3%A1,  %20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
             style="text-decoration:none"
           )
-            span Fale com um de nossos consultores
+            span.textobotao Fale com um de nossos consultores
+  div.interno2
+    div.logo
+      q-img(
+        src="/images/logo.png"
+      )
+    div.inputs
+      div
+        p.titulo Contato
+      div(
+        style="margin-bottom: 10px;"
+      )
+        p.titulo Nome:
+          q-input(
+            rounded
+            outlined
+            v-model="nome"
+            bg-color="white"
+            placeholder="Ex: Seu Nome"
+            dense
+          )
+      div(
+        style="margin-bottom: 10px;"
+      )
+        p.titulo E-mail:
+          q-input(
+            rounded
+            outlined
+            v-model="email"
+            placeholder="Ex: exemplo@exemplo.com"
+            bg-color="white"
+            dense
+          )
+      div(
+        style="margin-bottom: 10px;"
+      )
+        p.titulo Telefone:
+          q-input(
+            rounded
+            outlined
+            v-model="telefone"
+            mask="(##)#####-####"
+            placeholder="Ex: (85) 91234-5678"
+            bg-color="white"
+            dense
+          )
+    div.column.justify-start.align-center
+      div(
+        style="margin: 0 auto;"
+      )
+        p.titulo(
+          style="margin: 0 auto; margin-bottom: 10px ;"
+        ) Solicite seu orçamento agora mesmo!
+      div(
+        style="align-items:center; margin: 0 auto"
+      )
+        q-btn(
+          no-caps
+          color="green"
+          icon="fa-brands fa-whatsapp"
+          style="border-radius:20px"
+        )
+          a(
+            href="https://api.whatsapp.com/send?  phone=5585997250181&text=Ol%C3%A1,  %20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
+            style="text-decoration:none"
+          )
+            span.textobotao Fale com um de nossos consultores
+      div.row.q-gutter-sm(
+        style="margin-bottom:10px; margin: 0 auto"
+      )
+        a(
+          target="_blank"
+          href="https://br.linkedin.com/  company/supersupply"
+        )
+          q-icon(
+            size="md"
+            name="img:/icons/03.png"
+            color="white"
+          )
+        a(
+          target="_blank"
+          href="https://www.instagram.com/  supersupplyoficial/"
+          style="padding-top: 3px;"
+        )
+          q-icon(
+            size="sm"
+            name="img:/icons/02.png"
+            color="white"
+          )
+        a(
+          target="_blank"
+          href="https://www.facebook.com/"
+        )
+          q-icon(
+            size="md"
+            name="img:/icons/01.png"
+            color="white"
+          )
+
 </template>
 <style scoped>
 .container {
@@ -136,6 +232,13 @@ div.container
   margin: 0 auto;
   justify-content: space-between;
   flex-direction: row;
+}
+.interno2 {
+  width: 85%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
 }
 .logo {
   height: 40px;
@@ -158,5 +261,42 @@ p.titulo:hover {
 a {
   text-decoration: none;
   color: #fff
+}
+.inputs {
+  flex-direction: column;
+  width: 25%;
+}
+@media (max-width: 1280px) {
+  .logo {
+    width: 150px;
+  }
+  .titulo {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .interno {
+    display: none;
+  }
+  .inputs {
+    width: 100%;
+  }
+  .logo {
+    margin: 0 auto;
+    width: 180px;
+  }
+}
+@media (min-width: 1024px) {
+  .interno2 {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .textobotao {
+    font-size: 10px;
+  }
+  .titulo {
+    font-size: 12px;
+  }
 }
 </style>
