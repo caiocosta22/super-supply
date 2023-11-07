@@ -70,7 +70,7 @@ p {
     font-size: 28px;
   }
   .texto2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -98,7 +98,7 @@ p {
     font-size: 26px;
   }
   .texto2 {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) {
