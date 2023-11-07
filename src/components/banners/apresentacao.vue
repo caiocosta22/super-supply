@@ -24,14 +24,14 @@ div.container
 
 <style scoped>
 .container {
-  height: 550px;
+  height: 680px;
   background-color: #fff;
   flex-direction: column;
   display: flex;
   overflow: hidden;
 }
 .interno {
-  max-height: 490px;
+  max-height: 580px;
   overflow: hidden;
   flex-direction: row;
   display: flex;
@@ -115,15 +115,7 @@ p {
     font-size: 20px;
   }
   .texto2 {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 365px) {
-.container {
-    height: 600px;
-  }
-  .interno {
-    max-height: 530px;
+    font-size: 16px;
   }
 }
 </style>
