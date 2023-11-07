@@ -77,7 +77,7 @@ div.container
 }
 @media screen and (max-width: 480px) {
   .textobotao {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 </style>
