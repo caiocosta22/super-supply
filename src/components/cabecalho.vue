@@ -45,7 +45,7 @@ div.container
         href="https://br.linkedin.com/company/supersupply"
       )
         q-icon(
-          size="md"
+          size="lg"
           name="img:/icons/03.png"
           color="white"
         )
@@ -55,7 +55,7 @@ div.container
         style="padding-top: 3px;"
       )
         q-icon(
-          size="sm"
+          size="md"
           name="img:/icons/02.png"
           color="white"
         )
@@ -64,7 +64,7 @@ div.container
         href="https://www.facebook.com/"
       )
         q-icon(
-          size="md"
+          size="lg"
           name="img:/icons/01.png"
           color="white"
         )
@@ -75,6 +75,7 @@ div.container
           round
           dense
           icon="menu"
+          size="lg"
           color="white"
         )
 div.drawermenu
