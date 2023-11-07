@@ -38,7 +38,6 @@ div.column.q-pt-lg(
   width: 85%;
   display: flex;
   margin: 0 auto;
-  justify-content: space-between;
   flex-direction: row;
 }
 .logo {
@@ -62,5 +61,12 @@ p.titulo:hover {
 a {
   text-decoration: none;
   color: #fff
+}
+@media (max-width: 769px) {
+  .logo {
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+}
 }
 </style>
