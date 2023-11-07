@@ -5,22 +5,23 @@ const banners = ref([
   {
     fundo: "/images/banneratt/1.png",
     persona: "/images/fadebanner/descartaveis.png",
-    chamada: "/images/fadebanner/tudo_descartaveis.png"
+    chamada: "/images/fadebanner/tudo_descartaveis.png",
+    mobile: "/images/bannermobile/1.png"
   },
   {
     fundo: "/images/banneratt/2.png",
     persona: "/images/fadebanner/escritorio.png",
-    chamada: "/images/fadebanner/tudo_escritorio.png"
+    mobile: "/images/bannermobile/2.png"
   },
   {
     fundo: "/images/banneratt/3.png",
     persona: "/images/fadebanner/epi.png",
-    chamada: "/images/fadebanner/tudo_epi.png"
+    mobile: "/images/bannermobile/3.png"
   },
   {
     fundo: "/images/banneratt/4.png",
     persona: "/images/fadebanner/limpeza.png",
-    chamada: "/images/fadebanner/tudo_limpeza.png"
+    mobile: "/images/bannermobile/4.png"
   }
 ]);
 
@@ -57,7 +58,8 @@ div.banner
           :src="currentBanner.fundo"
         )
         img#mini(
-          src="/images/banneratt/banner769.png"
+          :key="currentIndex"
+          :src="currentBanner.mobile"
         )
 </template>
 
