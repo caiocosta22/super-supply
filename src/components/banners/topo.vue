@@ -3,22 +3,22 @@ import { ref, onMounted } from "vue";
 const show = ref(true);
 const banners = ref([
   {
-    fundo: "/images/fadebanner/banner_top_descartaveis.jpg",
+    fundo: "/images/banneratt/1.png",
     persona: "/images/fadebanner/descartaveis.png",
     chamada: "/images/fadebanner/tudo_descartaveis.png"
   },
   {
-    fundo: "/images/fadebanner/banner_top_escritorio.jpg",
+    fundo: "/images/banneratt/2.png",
     persona: "/images/fadebanner/escritorio.png",
     chamada: "/images/fadebanner/tudo_escritorio.png"
   },
   {
-    fundo: "/images/fadebanner/banner_top_epi.jpg",
+    fundo: "/images/banneratt/3.png",
     persona: "/images/fadebanner/epi.png",
     chamada: "/images/fadebanner/tudo_epi.png"
   },
   {
-    fundo: "/images/fadebanner/banner_top_limpeza.jpg",
+    fundo: "/images/banneratt/4.png",
     persona: "/images/fadebanner/limpeza.png",
     chamada: "/images/fadebanner/tudo_limpeza.png"
   }
@@ -52,23 +52,12 @@ div.banner
       div.banner(
         style="display: flex;"
       )
-        img(
+        img#full(
           :key="currentIndex"
           :src="currentBanner.fundo"
         )
-      div.persona
-        img(
-          :key="currentIndex"
-          :src="currentBanner.persona"
-        )
-      div.chamada
-        img(
-          :key="currentIndex"
-          :src="currentBanner.chamada"
-        )
-      div.titulo
-        img(
-          src="/images/fadebanner/logo.png"
+        img#mini(
+          src="/images/banneratt/banner769.png"
         )
 </template>
 
@@ -109,5 +98,18 @@ div.banner
 }
 .fade-enter, .fade-leave-to {
   opacity: 0;
+}
+@media (max-width: 768px) {
+  #full {
+    display: none;
+  }
+  .banner {
+    aspect-ratio: auto 769/700;
+  }
+}
+@media screen and (min-width: 769px) {
+  #mini {
+    display: none;
+  }
 }
 </style>
