@@ -2,7 +2,7 @@
 </script>
 
 <template lang="pug">
-div.column.q-pa-lg(
+div.column.q-px-lg.q-pt-lg(
   style="background-color: #fff; display: flex; justify-content: center; margin: 0 auto; align-items: center; text-align: center;"
 )
   p.justify-center(
@@ -11,18 +11,19 @@ div.column.q-pa-lg(
   p(
     style="color:#18264c; font-size: 16px; font-weight: 500;"
   ) SUPER SUPPLY DISTRIBUIDORA LTDA CNPJ: 45.141.688/0001-68
-  div.row(style="width: 500px; height: 100px; align-items: center; overflow: hidden; justify-content: center; margin: 0 auto;")
-    p(
-      style="font-size: 16px;color:#18264c;font-weight: 500;"
-    ) Desenvolvido por:
-    a(
+  div.copyright
+    a.row(
       href="https://www.instagram.com/agenciaalastrar/"
       cursor-pointer
       target="_blank"
+      style="text-align: center; align-items: center;"
     )
+      p(
+        style="font-size: 16px;color:#18264c;font-weight: 500;"
+      ) Desenvolvido por:
       img(
         src="/images/alastar.png"
-        style="display: block; width: 100px;  height: 100px; padding-bottom: 15px;"
+        style="display: block; width: 100px;  height:100px; padding-bottom: 12px;"
       )
 </template>
 
@@ -62,11 +63,12 @@ a {
   text-decoration: none;
   color: #fff
 }
-@media (max-width: 769px) {
-  .logo {
-  height: 40px;
-  width: 100px;
-  cursor: pointer;
+.copyright {
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  margin: 0 auto;
 }
+@media screen and (max-width: 769px) {
 }
 </style>
