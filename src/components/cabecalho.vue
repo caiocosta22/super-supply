@@ -81,7 +81,7 @@ div.drawermenu
   q-drawer(
     behavior="mobile"
     v-model="drawer"
-    :width="200"
+    :width="250"
     :breakpoint="1025"
     bordered
     side="right"
@@ -139,7 +139,7 @@ div.drawermenu
   cursor:pointer
 }
 .titulodrawer {
-  font-size: 14px;
+  font-size: 18px;
   color:#fff;
   font-weight: bold;
   margin: 0;
