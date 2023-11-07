@@ -113,7 +113,7 @@ div.drawermenu
   width: 100%;
   align-items: center;
   background-color: #18264c;
-  height: 80px;
+  height: 140px;
 }
 .cabecalho {
   display: flex;
@@ -124,7 +124,7 @@ div.drawermenu
   margin: 0 auto;
   justify-content:space-between;
   background-color: #18264c;
-  max-height: 80px;
+  max-height: 140px;
 }
 .logo {
   height: 40px;
@@ -157,6 +157,12 @@ p:hover {
 @media (max-width: 1024px) {
   #navegacao {
     display: none;
+  }
+  .cabecalho {
+    max-height: 140px;
+  }
+  .container {
+    height: 140px;
   }
 }
 @media screen and (min-width: 1024px) {
