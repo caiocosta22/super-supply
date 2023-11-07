@@ -40,7 +40,7 @@ div.container
     div.row.q-gutter-sm(
       style="flex-wrap: nowrap;"
     )
-      a(
+      a.q-pt-sm(
         target="_blank"
         href="https://br.linkedin.com/company/supersupply"
       )
@@ -49,17 +49,17 @@ div.container
           name="img:/icons/03.png"
           color="white"
         )
-      a(
+      a.q-pt-sm(
         target="_blank"
         href="https://www.instagram.com/supersupplyoficial/"
-        style="padding-top: 3px;"
+        style="padding-top: 10px;"
       )
         q-icon(
           size="md"
           name="img:/icons/02.png"
           color="white"
         )
-      a(
+      a.q-pt-sm(
         target="_blank"
         href="https://www.facebook.com/"
       )

@@ -2,7 +2,7 @@
 </script>
 
 <template lang="pug">
-div.column.q-pt-lg(
+div.column.q-pa-lg(
   style="background-color: #fff; display: flex; justify-content: center; margin: 0 auto; align-items: center; text-align: center;"
 )
   p.justify-center(
