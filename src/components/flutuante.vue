@@ -68,6 +68,10 @@ span {
   width: 100%;
   text-align: center;
 }
+
+.second {
+  display: none;
+}
 }
 @media screen and (max-width: 480px) {
   .texto1 {
@@ -75,9 +79,6 @@ span {
 }
  .texto2 {
   font-size:20px;
-}
-.second {
-  display: none;
 }
 }
 
