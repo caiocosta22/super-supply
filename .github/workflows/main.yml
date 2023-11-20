@@ -16,9 +16,4 @@ jobs:
         host: ${{ secrets.HOST }} 
         user: ${{ secrets.USER }}
         password: ${{ secrets.PASS }}
-<<<<<<< HEAD
         remoteDir: "/public_html/teste"
-=======
-        remoteDir: "/public_html/teste"
-        localDir: "dist/spa"
->>>>>>> 2a83aa8074ef83063460c69c93d328eefe63f3e1
