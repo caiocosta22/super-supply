@@ -3,9 +3,9 @@
 
 <template lang="pug">
 div.container
-  div.justify-center
+  div.justify-center.q-mb-xl
     p.titulo QUEM SOMOS
-  div.interno.q-pt-xl
+  div.interno.q-pt-lg
     div.coluna
       p.texto1 Descubra uma abordagem moderna e inovadora, criada  especialmente para empresas como a sua.
     div.barras
@@ -24,14 +24,14 @@ div.container
 
 <style scoped>
 .container {
-  height: 680px;
+  height: 580px;
   background-color: #fff;
   flex-direction: column;
   display: flex;
   overflow: hidden;
 }
 .interno {
-  max-height: 580px;
+  max-height: 480px;
   overflow: hidden;
   flex-direction: row;
   display: flex;
