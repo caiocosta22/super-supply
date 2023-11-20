@@ -35,7 +35,7 @@ const breakpoints = ref({
 
 <template lang="pug">
 div.container
-  div.justify-center.q-pb-xl
+  div.justify-center.q-pb-xl.q-mb-sm.q-pt-lg
     p.beneficios BENEFÍCIOS E SOLUÇÕES
   Carousel(
     v-bind="settings"

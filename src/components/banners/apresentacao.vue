@@ -3,7 +3,7 @@
 
 <template lang="pug">
 div.container
-  div.justify-center.q-pt-lg
+  div.justify-center
     p.titulo QUEM SOMOS
   div.interno.q-pt-xl
     div.coluna

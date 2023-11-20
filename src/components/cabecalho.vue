@@ -9,12 +9,12 @@ const menus = ref([
   { titulo: "Contato", sessao: "rodape" }
 ]);
 const drawer = ref(false);
+
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
-
   if (section) {
     window.scrollTo({
-      top: section.offsetTop,
+      top: section.offsetTop - 140,
       behavior: "smooth"
     });
   }
