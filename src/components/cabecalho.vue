@@ -88,7 +88,9 @@ div.drawermenu
     side="right"
     class="bg-primary"
   )
-    q-scroll-area(class="fit")
+    q-scroll-area(
+      class="fit"
+    )
       q-list
         template(
           v-for="menu in menus"
@@ -96,10 +98,11 @@ div.drawermenu
         )
           q-item(
             clickable :active="menu.titulo === 'Outbox'" v-ripple
-            @click="scrollToSection(menu.sessao)"
           )
             q-item-section
-              p.titulodrawer {{ menu.titulo }}
+              p.titulodrawer(
+                @click="drawer = !drawer, scrollToSection(menu.sessao)"
+              ) {{ menu.titulo }}
           q-separator
 </template>
 
