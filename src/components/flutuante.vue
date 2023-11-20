@@ -7,6 +7,10 @@ div.container
     div
       span.texto1 Tudo o que você precisa em suprimentos corporativos está aqui.&nbsp
       span.texto2 Papelaria, limpeza, descartáveis, EPI, equipamentos e muito mais.
+    div.second
+      q-img.caixas(
+        src="/images/caixas.png"
+      )
 </template>
 
 <style scoped>
@@ -25,6 +29,9 @@ div.container
   width: 85%;
   align-items: center;
   justify-content: space-between;
+}
+.caixas {
+  z-index: 1;
 }
 .interno > div {
   width: 45%;
@@ -68,6 +75,9 @@ span {
 }
  .texto2 {
   font-size:20px;
+}
+.second {
+  display: none;
 }
 }
 
