@@ -1,5 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { useQuasar } from "quasar";
+const $q = useQuasar();
 const show = ref(true);
 const banners = ref([
   {
@@ -42,22 +44,40 @@ onMounted(() => {
 </script>
 
 <template lang="pug">
-div.banner
-  transition(
-    name="fade"
-    mode="out-in"
-  )
-    div.banner(
-      v-show="show"
+template(
+  v-if="$q.platform.is.desktop"
+)
+  div.banner
+    transition(
+      name="fade"
+      mode="out-in"
     )
       div.banner(
+        v-show="show"
+      )
+        div.banner(
+          style="display: flex;"
+        )
+          img#full(
+            :key="currentIndex"
+            :src="currentBanner.fundo"
+          )
+          img#mini(
+            :key="currentIndex"
+            :src="currentBanner.mobile"
+          )
+template(
+    v-if="$q.platform.is.mobile"
+  )
+  div.mobile(
+  )
+    div.mobile(
+      v-show="show"
+    )
+      div.mobile(
         style="display: flex;"
       )
-        img#full(
-          :key="currentIndex"
-          :src="currentBanner.fundo"
-        )
-        img#mini(
+        img(
           :key="currentIndex"
           :src="currentBanner.mobile"
         )
@@ -74,30 +94,17 @@ div.banner
   width: 100%;
   overflow: hidden;
 }
-.persona {
-  position: absolute;
-  width: 59%;
-  display: flex;
-  justify-content: end;
-  z-index: 1;
+.mobile{
+  display:flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  aspect-ratio: auto 769/700;
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
 }
-.chamada {
-  position: absolute;
-  width: 90%;
-  display: flex;
-  z-index: 2;
-  justify-content: end;
-  align-items: center;
-  margin-top: 170px
-}
-.titulo {
-  position: absolute;
-  display: flex;
-  z-index: 3;
-  width: 73%;
-  margin-top: 230px;
-  justify-content: end;
-}
+
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
