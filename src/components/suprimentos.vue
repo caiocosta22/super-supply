@@ -15,7 +15,8 @@ const icons = ref([
 ]);
 const settings = ref({
   snapAlign: "start",
-  wrapAround: true
+  wrapAround: true,
+  autoplay: 2500
 });
 const breakpoints = ref({
   368: {
