@@ -69,6 +69,17 @@ div.container
             bg-color="white"
             dense
           )
+      div(
+        style="margin-bottom:10px"
+      )
+        q-btn.titulo(
+          no-caps
+          color="white"
+          style="border-radius:20px;width: 85%; margin-top: 20px;"
+        )
+          span(
+            style="font-size: 16px; color: black;;"
+          ) Enviar
     div.column.justify-start.align-center
       div.row.q-gutter-sm(
         style="margin-bottom:10px"
@@ -112,7 +123,7 @@ div.container
           no-caps
           color="green"
           icon="fa-brands fa-whatsapp"
-          style="border-radius:20px"
+          style="border-radius:20px;"
         )
           a(
             href="https://api.whatsapp.com/send?  phone=5585997250181&text=Ol%C3%A1,  %20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
@@ -164,6 +175,17 @@ div.container
             bg-color="white"
             dense
           )
+    div(
+      style="margin: 0 auto 20px;"
+    )
+      q-btn.titulo(
+        no-caps
+        color="white"
+        style="border-radius:20px; margin-top: 20px; width: 100%"
+      )
+        span(
+          style="font-size: 16px; color: black;"
+        ) Enviar
     div.column.justify-start.align-center
       div(
         style="margin: 0 auto;"
@@ -186,7 +208,7 @@ div.container
           )
             span.textobotao Fale com um de nossos consultores
       div.row.q-gutter-sm(
-        style="margin-bottom:10px; margin: 0 auto"
+        style="margin: 10px auto"
       )
         a(
           target="_blank"
@@ -284,6 +306,9 @@ a {
   .logo {
     margin: 0 auto;
     width: 180px;
+  }
+  .container{
+    height: 550px;
   }
 }
 @media (min-width: 1024px) {
