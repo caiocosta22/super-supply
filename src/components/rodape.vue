@@ -178,7 +178,7 @@ div.container
     div(
       style="margin: 0 auto 20px;"
     )
-      q-btn.titulo(
+      q-btn(
         no-caps
         color="white"
         style="border-radius:20px; margin-top: 20px; width: 100%"
