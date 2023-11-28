@@ -3,8 +3,16 @@
 
 <template lang="pug">
 div.container
-  div.justify-center.q-mb-xl
-    p.titulo QUEM SOMOS
+  template(
+    v-if="$q.platform.is.desktop"
+  )
+    div.justify-center.q-mb-xl
+      p.titulo QUEM SOMOS
+  template(
+    v-if="$q.platform.is.mobile"
+  )
+    div.justify-center
+      p.titulo QUEM SOMOS
   div.interno.q-pt-lg
     div.coluna
       p.texto1 Descubra uma abordagem moderna e inovadora, criada  especialmente para empresas como a sua.

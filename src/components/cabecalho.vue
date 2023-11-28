@@ -68,42 +68,6 @@ div.container
           name="img:/icons/01.png"
           color="white"
         )
-      div.botaomenu.row
-        q-btn(
-          flat
-          @click="drawer = !drawer"
-          round
-          dense
-          icon="menu"
-          size="lg"
-          color="white"
-        )
-div.drawermenu
-  q-drawer(
-    behavior="mobile"
-    v-model="drawer"
-    :width="250"
-    :breakpoint="1025"
-    bordered
-    side="right"
-    class="bg-primary"
-  )
-    q-scroll-area(
-      class="fit"
-    )
-      q-list
-        template(
-          v-for="menu in menus"
-          :key="menu.titulo"
-        )
-          q-item(
-            clickable :active="menu.titulo === 'Outbox'" v-ripple
-          )
-            q-item-section
-              p.titulodrawer(
-                @click="drawer = !drawer, scrollToSection(menu.sessao)"
-              ) {{ menu.titulo }}
-          q-separator
 </template>
 
 <style scoped>
