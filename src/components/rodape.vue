@@ -11,6 +11,8 @@ const menus = ref([
 const nome = ref("");
 const telefone = ref("");
 const email = ref("");
+const prompt = ref(false);
+const leis = ref("A Super Supply em conformidade com a LEI Nª 13.709, de 14 DE AGOSTO DE 2018 (LGPD), informa que ao prosseguir com esse formulário você concorda com o Tratamento de Dados Pessoais, no qual poderão ser solicitados dados como: Nome, CPF, telefone, e-mail, dentre outros.");
 </script>
 
 <template lang="pug">
@@ -76,6 +78,7 @@ div.container
           no-caps
           color="white"
           style="border-radius:20px; width: 100%;"
+          @click="prompt = true"
         )
           span(
             style="font-size: 16px; color: black;"
@@ -182,6 +185,7 @@ div.container
         no-caps
         color="white"
         style="border-radius:20px"
+        @click="prompt = true"
       )
         span(
           style="font-size: 16px; color: black;"
@@ -201,6 +205,7 @@ div.container
           color="green"
           icon="fa-brands fa-whatsapp"
           style="border-radius:20px"
+          @click="prompt= true"
         )
           a(
             href="https://api.whatsapp.com/send?  phone=5585997250181&text=Ol%C3%A1,  %20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
@@ -238,7 +243,42 @@ div.container
             name="img:/icons/01.png"
             color="white"
           )
-
+q-dialog(
+  v-model="prompt"
+)
+  q-card(
+    style="min-width: 350px; background-color:#18264c ;"
+  )
+    q-card-section.row.items-center
+      div.h6(style="color: #fff;") Deseja continuar?
+      q-space
+      q-btn(
+        icon="close"
+        flat
+        round
+        dense
+        v-close-popup
+      )
+    q-card-section
+      p(
+        style="font-size:12px; color: #fff;"
+      ) {{ leis }}
+    q-card-actions(
+      align="right"
+      text-black
+    )
+      q-btn(
+        label="Cancelar"
+        v-close-popup
+        size="sm"
+        style="background-color: white; color: black;"
+      )
+      q-btn(
+        label="Enviar"
+        v-close-popup
+        style="background-color: white; color: black;"
+        size="sm"
+      )
 </template>
 <style scoped>
 .container {
