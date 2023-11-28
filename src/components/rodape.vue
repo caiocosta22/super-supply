@@ -70,15 +70,15 @@ div.container
             dense
           )
       div(
-        style="margin-bottom:10px"
+        style="margin: 20px auto 10px"
       )
-        q-btn.titulo(
+        q-btn(
           no-caps
           color="white"
-          style="border-radius:20px;width: 85%; margin-top: 20px;"
+          style="border-radius:20px; width: 100%;"
         )
           span(
-            style="font-size: 16px; color: black;;"
+            style="font-size: 16px; color: black;"
           ) Enviar
     div.column.justify-start.align-center
       div.row.q-gutter-sm(
@@ -86,7 +86,7 @@ div.container
       )
         a(
           target="_blank"
-          href="https://br.linkedin.com/  company/supersupply"
+          href="https://br.linkedin.com/company/supersupply"
         )
           q-icon(
             size="md"
@@ -95,7 +95,7 @@ div.container
           )
         a(
           target="_blank"
-          href="https://www.instagram.com/  supersupplyoficial/"
+          href="https://www.instagram.com/supersupplyoficial/"
           style="padding-top: 3px;"
         )
           q-icon(
@@ -126,7 +126,7 @@ div.container
           style="border-radius:20px;"
         )
           a(
-            href="https://api.whatsapp.com/send?  phone=5585997250181&text=Ol%C3%A1,  %20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
+            href="https://api.whatsapp.com/send?phone=5585997250181&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
             style="text-decoration:none"
           )
             span.textobotao Fale com um de nossos consultores
@@ -176,12 +176,12 @@ div.container
             dense
           )
     div(
-      style="margin: 0 auto 20px;"
+      style="margin: 20px auto 10px"
     )
       q-btn(
         no-caps
         color="white"
-        style="border-radius:20px; margin-top: 20px; width: 100%"
+        style="border-radius:20px"
       )
         span(
           style="font-size: 16px; color: black;"
@@ -272,7 +272,6 @@ div.container
   color:#fff;
   font-weight: 600;
   margin: 0 auto;
-  margin-left: 60px;
   cursor:pointer;
   line-height: 30px;
 }
@@ -291,9 +290,6 @@ a {
 @media (max-width: 1280px) {
   .logo {
     width: 150px;
-  }
-  .titulo {
-    margin-left: 20px;
   }
 }
 @media (max-width: 1024px) {
