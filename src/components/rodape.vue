@@ -15,14 +15,15 @@ const emailtexto = ref("");
 const prompt = ref(false);
 const leis = ref("A Super Supply em conformidade com a LEI Nª 13.709, de 14 DE AGOSTO DE 2018 (LGPD), informa que ao prosseguir com esse formulário você concorda com o Tratamento de Dados Pessoais, no qual poderão ser solicitados dados como: Nome, CPF, telefone, e-mail, dentre outros.");
 const templateParams = ref({
-  to_name: nome,
-  from_name: nome,
-  message: telefone,
+  to_name: "Super Supply",
+  from_name: "Agência Alastrar",
+  nomelead: nome,
+  number: telefone,
   email: emailtexto
 });
 
 function sendEmail () {
-  emailjs.send("service_0auw09f", "template_dkxtd0t", templateParams, "h_eLJOcO9ougEAwka").then((response) => {
+  emailjs.send("service_0auw09f", "template_dkxtd0t", templateParams.value, "h_eLJOcO9ougEAwka").then((response) => {
     console.log("email enviado", response.status, response.text);
   }, (err) => {
     console.log(err);
@@ -55,6 +56,7 @@ div.container
         p.titulo Nome:
           q-input(
             rounded
+            v-model="nome"
             outlined
             bg-color="white"
             placeholder="Ex: Seu Nome"
@@ -67,6 +69,7 @@ div.container
           q-input(
             rounded
             outlined
+            v-model="emailtexto"
             placeholder="Ex: exemplo@exemplo.com"
             bg-color="white"
             dense
@@ -78,6 +81,7 @@ div.container
           q-input(
             rounded
             outlined
+            v-model="telefone"
             mask="(##)#####-####"
             placeholder="Ex: (85) 91234-5678"
             bg-color="white"
