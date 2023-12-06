@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import emailjs from "@emailjs/browser";
 const menus = ref([
   { titulo: "Quem somos" },
   { titulo: "Benefícios e Soluções" },
@@ -10,9 +11,23 @@ const menus = ref([
 ]);
 const nome = ref("");
 const telefone = ref("");
-const email = ref("");
+const emailtexto = ref("");
 const prompt = ref(false);
 const leis = ref("A Super Supply em conformidade com a LEI Nª 13.709, de 14 DE AGOSTO DE 2018 (LGPD), informa que ao prosseguir com esse formulário você concorda com o Tratamento de Dados Pessoais, no qual poderão ser solicitados dados como: Nome, CPF, telefone, e-mail, dentre outros.");
+const templateParams = ref({
+  to_name: nome,
+  from_name: nome,
+  message: telefone,
+  email: emailtexto
+});
+
+function sendEmail () {
+  emailjs.send("service_0auw09f", "template_dkxtd0t", templateParams, "h_eLJOcO9ougEAwka").then((response) => {
+    console.log("email enviado", response.status, response.text);
+  }, (err) => {
+    console.log(err);
+  });
+}
 </script>
 
 <template lang="pug">
@@ -41,7 +56,6 @@ div.container
           q-input(
             rounded
             outlined
-            v-model="nome"
             bg-color="white"
             placeholder="Ex: Seu Nome"
             dense
@@ -53,7 +67,6 @@ div.container
           q-input(
             rounded
             outlined
-            v-model="email"
             placeholder="Ex: exemplo@exemplo.com"
             bg-color="white"
             dense
@@ -65,7 +78,6 @@ div.container
           q-input(
             rounded
             outlined
-            v-model="telefone"
             mask="(##)#####-####"
             placeholder="Ex: (85) 91234-5678"
             bg-color="white"
@@ -160,7 +172,7 @@ div.container
           q-input(
             rounded
             outlined
-            v-model="email"
+            v-model="emailtexto"
             placeholder="Ex: exemplo@exemplo.com"
             bg-color="white"
             dense
@@ -278,6 +290,7 @@ q-dialog(
         v-close-popup
         style="background-color: white; color: black;"
         size="sm"
+        @click="sendEmail"
       )
 </template>
 <style scoped>
