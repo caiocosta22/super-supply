@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import { useQuasar } from "quasar";
 import emailjs from "@emailjs/browser";
+const $q = useQuasar();
 const menus = ref([
   { titulo: "Quem somos" },
   { titulo: "Benefícios e Soluções" },
@@ -25,6 +27,12 @@ const templateParams = ref({
 function sendEmail () {
   emailjs.send("service_0auw09f", "template_dkxtd0t", templateParams.value, "h_eLJOcO9ougEAwka").then((response) => {
     console.log("email enviado", response.status, response.text);
+    $q.notify({
+      color: "green",
+      textColor: "white",
+      icon: "check",
+      message: "Email enviado com sucesso!"
+    });
   }, (err) => {
     console.log(err);
   });
