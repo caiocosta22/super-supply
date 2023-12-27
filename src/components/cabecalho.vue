@@ -6,9 +6,8 @@ const menus = ref([
   { titulo: "Suprimentos", sessao: "suprimentos" },
   { titulo: "Fornecedores", sessao: "carousel1" },
   { titulo: "Clientes", sessao: "carousel2" },
-  { titulo: "Contato", sessao: "rodape" }
+  { titulo: "Contato", sessao: "formulario" }
 ]);
-const drawer = ref(false);
 
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);

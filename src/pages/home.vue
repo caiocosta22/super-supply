@@ -8,6 +8,7 @@ import suprimentos from "src/components/suprimentos.vue";
 import carousel from "src/components/carousel.fornecedores.vue";
 import clientes from "src/components/carousel.clientes.vue";
 import chamada from "src/components/banners/chamada.vue";
+import rodape from "src/components/rodape.vue";
 </script>
 
 <template lang="pug">
@@ -29,6 +30,8 @@ q-page-container
   )
     p.titulo PRINCIPAIS CLIENTES
   clientes
+  p#formulario
+  rodape
 </template>
 
 <style scoped>
