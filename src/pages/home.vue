@@ -30,8 +30,7 @@ q-page-container
   )
     p.titulo PRINCIPAIS CLIENTES
   clientes
-  p#formulario
-  rodape
+  div#formulario
 </template>
 
 <style scoped>
@@ -40,6 +39,10 @@ q-page-container
 }
 #carousel2 {
   padding-top: 100px;
+}
+#formulario {
+  background-color: blue;
+
 }
 .titulo {
   font-weight:700;

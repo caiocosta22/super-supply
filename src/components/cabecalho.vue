@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 const menus = ref([
   { titulo: "Quem somos", sessao: "apresentacao" },
   { titulo: "Benefícios e Soluções", sessao: "beneficios" },
@@ -18,6 +21,11 @@ const scrollToSection = (sectionId) => {
     });
   }
 };
+
+function goTo () {
+  const url = "/";
+  router.push(url);
+}
 </script>
 
 <template lang="pug">
@@ -27,6 +35,7 @@ div.container
       q-img.imagem(
         src="/images/logo.png"
         spinner-colow="white"
+        @click="goTo()"
       )
     div#navegacao.row.col.justify-evenly
       template(
