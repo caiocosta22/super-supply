@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { useQuasar } from "quasar";
+import { useRouter } from "vue-router";
 import emailjs from "@emailjs/browser";
 const $q = useQuasar();
 const menus = ref([
@@ -9,7 +10,8 @@ const menus = ref([
   { titulo: "Suprimentos" },
   { titulo: "Fornecedores" },
   { titulo: "Clientes" },
-  { titulo: "Contato" }
+  { titulo: "Contato" },
+  { titulo: "Trabalhe Conosco" }
 ]);
 const nome = ref("");
 const telefone = ref("");
@@ -23,6 +25,7 @@ const templateParams = ref({
   number: telefone,
   email: emailtexto
 });
+const router = useRouter();
 
 function sendEmail () {
   emailjs.send("service_0auw09f", "template_dkxtd0t", templateParams.value, "h_eLJOcO9ougEAwka").then((response) => {
@@ -36,6 +39,13 @@ function sendEmail () {
   }, (err) => {
     console.log(err);
   });
+}
+
+function goTo (titulo) {
+  if (titulo === "Trabalhe Conosco") {
+    const url = "/trabalhe";
+    router.push(url);
+  }
 }
 
 function verificaForm () {
@@ -65,6 +75,7 @@ div.container
         :key="menu.titulo"
       )
         p.titulo(
+          @click="goTo(menu.titulo)"
         ) {{ menu.titulo }}
     div.inputs
       div(

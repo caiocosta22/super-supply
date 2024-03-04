@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
+
 const menus = ref([
   { titulo: "Quem somos", sessao: "apresentacao" },
   { titulo: "Soluções", sessao: "beneficios" },
@@ -9,7 +12,6 @@ const menus = ref([
   { titulo: "Localização", sessao: "localizacao" },
   { titulo: "Contato", sessao: "rodape" }
 ]);
-const drawer = ref(false);
 
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
@@ -20,6 +22,11 @@ const scrollToSection = (sectionId) => {
     });
   }
 };
+
+function goTo () {
+  const url = "/";
+  router.push(url);
+}
 </script>
 
 <template lang="pug">
@@ -29,6 +36,7 @@ div.container
       q-img.imagem(
         src="/images/logo.png"
         spinner-colow="white"
+        @click="goTo()"
       )
     div#navegacao.row.col.justify-evenly
       template(
