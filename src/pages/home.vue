@@ -8,6 +8,7 @@ import suprimentos from "src/components/suprimentos.vue";
 import carousel from "src/components/carousel.fornecedores.vue";
 import clientes from "src/components/carousel.clientes.vue";
 import chamada from "src/components/banners/chamada.vue";
+import localizacao from "src/components/localizacao.vue";
 </script>
 
 <template lang="pug">
@@ -18,17 +19,13 @@ q-page-container
   beneficios#beneficios
   flutuante
   suprimentos#suprimentos
-  div.q-py-xl#carousel1(
-    style="background-color:#ececec"
-  )
-    p.titulo PRINCIPAIS FORNECEDORES
+  span#carousel1
   carousel
   chamada
-  div.q-py-xl#carousel2(
-    style="background-color:#ececec"
-  )
-    p.titulo PRINCIPAIS CLIENTES
+  span#carousel2
   clientes
+  div#localizacao
+  localizacao
 </template>
 
 <style scoped>

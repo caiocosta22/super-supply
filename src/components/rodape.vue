@@ -37,6 +37,19 @@ function sendEmail () {
     console.log(err);
   });
 }
+
+function verificaForm () {
+  if (nome.value !== "" && telefone.value !== "" && emailtexto.value !== "") {
+    prompt.value = true;
+  } else {
+    $q.notify({
+      color: "red",
+      textColor: "white",
+      icon: "warning",
+      message: "Por favor, preencha todos os campos"
+    });
+  }
+}
 </script>
 
 <template lang="pug">
@@ -64,11 +77,13 @@ div.container
         p.titulo Nome:
           q-input(
             rounded
-            v-model="nome"
             outlined
-            bg-color="white"
-            placeholder="Ex: Seu Nome"
             dense
+            v-model="nome"
+            bg-color="white"
+            lazy-rules
+            :rules="[ val => val && val.length > 0 ||   'campo   obrigatório']"
+            placeholder="Ex: Seu Nome"
           )
       div(
         style="margin-bottom: 10px;"
@@ -81,6 +96,8 @@ div.container
             placeholder="Ex: exemplo@exemplo.com"
             bg-color="white"
             dense
+            lazy-rules
+            :rules="[ val => val && val.length > 0 || 'E-mail obrigatório']"
           )
       div(
         style="margin-bottom: 10px;"
@@ -94,6 +111,7 @@ div.container
             placeholder="Ex: (85) 91234-5678"
             bg-color="white"
             dense
+            :rules="[ val => val && val.length > 0 ||   'campo   obrigatório']"
           )
       div(
         style="margin: 20px auto 10px"
@@ -102,7 +120,7 @@ div.container
           no-caps
           color="white"
           style="border-radius:20px; width: 100%;"
-          @click="prompt = true"
+          @click="verificaForm()"
         )
           span(
             style="font-size: 16px; color: black;"

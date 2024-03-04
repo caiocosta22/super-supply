@@ -41,23 +41,26 @@ const breakpoints = ref({
 
 <template lang="pug">
 .container
-  Carousel(
-      v-bind="settings"
-      :breakpoints="breakpoints"
-      style="width: 85%; background-color: #ececec;"
-    )
-    Slide(
-      v-for="(icon,index) in icons"
-      :key="index"
-    )
-      div.column.justify-center(
-        @click="openCategoryPage(categoria)"
+  .titulo
+    span PRINCIPAIS CLIENTES
+  .interno
+    Carousel(
+        v-bind="settings"
+        :breakpoints="breakpoints"
+        style="width: 100%; background-color: #ececec;"
       )
-        img.cursor-pointer(
-          :src="icon.icone"
-          spinner="white"
-          style="max-width:100%;display:block"
+      Slide(
+        v-for="(icon,index) in icons"
+        :key="index"
+      )
+        div.column.justify-center(
+          @click="openCategoryPage(categoria)"
         )
+          img.cursor-pointer(
+            :src="icon.icone"
+            spinner="white"
+            style="max-width:100%;display:block"
+          )
 </template>
 
 <style scoped>
@@ -80,7 +83,15 @@ const breakpoints = ref({
   width: 100%;
   padding-bottom: 40px;
   background-color: #ececec;
-  flex-direction: row;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.interno{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 85%;
 }
 p {
   color: #18264c;
@@ -88,5 +99,12 @@ p {
 }
 span {
   color: #18264c;
+}
+.titulo {
+  font-weight:700;
+  font-size: 34px;
+  color: #18264c;
+  text-align:CENTER;
+  margin-bottom: 40px;
 }
 </style>

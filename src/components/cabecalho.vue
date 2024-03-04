@@ -2,10 +2,11 @@
 import { ref } from "vue";
 const menus = ref([
   { titulo: "Quem somos", sessao: "apresentacao" },
-  { titulo: "Benefícios e Soluções", sessao: "beneficios" },
+  { titulo: "Soluções", sessao: "beneficios" },
   { titulo: "Suprimentos", sessao: "suprimentos" },
   { titulo: "Fornecedores", sessao: "carousel1" },
   { titulo: "Clientes", sessao: "carousel2" },
+  { titulo: "Localização", sessao: "localizacao" },
   { titulo: "Contato", sessao: "rodape" }
 ]);
 const drawer = ref(false);
