@@ -173,7 +173,7 @@ div.container
           style="margin: 0; margin-bottom: 10px ;"
         ) Solicite seu orçamento agora mesmo!
       div(
-        style="align-items:center"
+        styles="align-items:center"
       )
         q-btn(
           no-caps
@@ -182,8 +182,9 @@ div.container
           style="border-radius:20px;"
         )
           a(
-            href="https://api.whatsapp.com/send?phone=5585997250181&text=Ol%C3%A1,%20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
+            href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
             style="text-decoration:none"
+            target="_blank"
           )
             span.textobotao Fale com um de nossos consultores
   div.interno2
@@ -261,8 +262,9 @@ div.container
           @click="prompt= true"
         )
           a(
-            href="https://api.whatsapp.com/send?  phone=5585997250181&text=Ol%C3%A1,  %20gostaria%20de%20fazer%20um%20or%C3%A7amento..."
+            href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
             style="text-decoration:none"
+            target="_blank"
           )
             span.textobotao Fale com um de nossos consultores
       div.row.q-gutter-sm(
