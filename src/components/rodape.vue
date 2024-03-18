@@ -175,16 +175,16 @@ div.container
       div(
         styles="align-items:center"
       )
-        q-btn(
-          no-caps
-          color="green"
-          icon="fa-brands fa-whatsapp"
-          style="border-radius:20px;"
+        a(
+          href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
+          style="text-decoration:none"
+          target="_blank"
         )
-          a(
-            href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
-            style="text-decoration:none"
-            target="_blank"
+          q-btn(
+            no-caps
+            color="green"
+            icon="fa-brands fa-whatsapp"
+            style="border-radius:20px;"
           )
             span.textobotao Fale com um de nossos consultores
   div.interno2
@@ -254,17 +254,17 @@ div.container
       div(
         style="align-items:center; margin: 0 auto"
       )
-        q-btn(
-          no-caps
-          color="green"
-          icon="fa-brands fa-whatsapp"
-          style="border-radius:20px"
-          @click="prompt= true"
-        )
-          a(
-            href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
-            style="text-decoration:none"
-            target="_blank"
+        a(
+          href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
+          style="text-decoration:none"
+          target="_blank"
+         )
+          q-btn(
+            no-caps
+            color="green"
+            icon="fa-brands fa-whatsapp"
+            style="border-radius:20px"
+            @click="prompt= true"
           )
             span.textobotao Fale com um de nossos consultores
       div.row.q-gutter-sm(

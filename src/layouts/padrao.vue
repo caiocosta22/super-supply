@@ -33,16 +33,16 @@ q-layout(view="lHh Lpr lFf")
   q-header
     cabecalho
   router-view
-  q-btn.floating-button(
-    color="green"
-    fab
-    position="bottom-right"
-    align="right"
+  a(
+    href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
+    target="_blank"
+    style="color:#fff"
   )
-    a(
-      href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
-      target="_blank"
-      style="color:#fff"
+    q-btn.floating-button(
+      color="green"
+      fab
+      position="bottom-right"
+      align="right"
     )
       q-icon(
         name="fa-brands fa-whatsapp"

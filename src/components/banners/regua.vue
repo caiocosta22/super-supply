@@ -8,16 +8,16 @@ div.container
     div
       p.chamada Solicite seu orçamento agora mesmo!
     div.containerbotao
-      q-btn.botao(
-        no-caps
-        color="green"
-        icon="fa-brands fa-whatsapp"
-        style="border-radius:20px"
-      )
-        a(
-          href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
-          target="_blank"
-          style="text-decoration:none"
+      a(
+        href="https://wa.me/558533001818?text=Ol%C3%A1%2C+venho+atr%C3%A1ves+do+Site+da+Super+Supply.+Gostaria+de+mais+informa%C3%A7%C3%B5es"
+        target="_blank"
+        style="text-decoration:none"
+       )
+        q-btn.botao(
+          no-caps
+          color="green"
+          icon="fa-brands fa-whatsapp"
+          style="border-radius:20px"
         )
           span.textobotao Fale com um de nossos consultores
 </template>
